@@ -1,2 +1,3 @@
 # pyschool
-PYSchool Exercise
+# PYSchool Exercise Results
+# For my own reference only
