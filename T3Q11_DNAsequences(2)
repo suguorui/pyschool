@@ -1,0 +1,19 @@
+def pairwiseScore(seqA, seqB): 
+	score = 0
+	match = []
+	Prematch = False
+	for z in range(len(seqA)):
+		if seqA[z] == seqB[z]:
+			if Prematch == True:
+				score += 3
+			else:
+				score +=1
+				Prematch = True
+			match.append("|")
+		else:
+			score -= 1
+			match.append(" ")
+			Prematch = False
+	answer = seqA + "\n" + ''.join(match) + "\n" + seqB + '\n' + 'Score: ' + str(score)
+	return (answer)
+			
