@@ -1,0 +1,22 @@
+def RiskGame(attacker, defender): 
+	attacker.sort() #sort attacker from lowest value to highest
+	PA = 0   #Lost Point for Attacker
+	PD = 0   #Lost Point for Defender
+	med = attacker[1] # Assign median in Attacker
+	if max(attacker)>max(defender):
+		PD += 1
+	else:
+		PA += 1
+	if med>min(defender):
+		PD += 1
+	else:
+		PA += 1
+	if PD > PA:
+		return ('Defender loses 2 armies.')
+	elif PD < PA:
+		return ('Attacker loses 2 armies.')
+	else:
+		return ('Attacker loses 1 army and defender loses 1 army.')
+	
+	
+		
