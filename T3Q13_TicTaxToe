@@ -1,0 +1,17 @@
+def tictactoe(moves): 
+	if (moves[0][0] == moves[0][1] == moves[0][2] or moves[1][0] == moves[1][1] == moves[1][2] or moves[2][0] == moves[2][1] == moves[2][2]): 	
+		if moves[0][0] == 'X':
+			return "'X' wins (horizontal)."
+		else:
+			return "'O' wins (horizontal)."
+	elif (moves[0][0] == moves[1][0] == moves[2][0] or moves[0][1] == moves[1][1] == moves[2][1] or moves[0][2] == moves[1][2] == moves[2][2]): 	
+		if moves[0][0] == 'X':
+			return "'X' wins (vertical)."
+		else:
+			return "'O' wins (vertical)."
+	elif (moves[0][0] == moves[1][1] == moves[2][2]=='x' or moves[0][2] == moves[1][1] == moves[2][0]=='X'): 	
+		return "'X' wins (diagonal)."
+	elif (moves[0][0] == moves[1][1] == moves[2][2]=='O' or moves[0][2] == moves[1][1] == moves[2][0]=='O'): 	
+		return "'O' wins (diagonal)."
+	else:
+		return "Draw."
