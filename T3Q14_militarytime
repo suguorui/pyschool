@@ -1,0 +1,15 @@
+def time12hr(inputtime):
+	 mtime = str(inputtime)
+	 hr = int(mtime[:2])
+	 min = mtime[2:]
+	 if hr > 12:       # pm time
+	 	hr = hr-12
+	 	rtime = str(hr) + ':' + min + ' ' + 'p.m.'
+	 elif hr == 12:    # noon time
+	 	rtime = str(hr) + ':' + min + ' ' + 'p.m.'
+	 elif hr == 00:    # supermorning time
+	 	rtime = str(hr+12) + ':' + min + ' ' + 'a.m.'
+	 else:             # am time
+	 	rtime = str(hr) + ':' + min + ' ' + 'a.m.'
+	 return rtime
+	 
