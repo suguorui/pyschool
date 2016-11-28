@@ -1,0 +1,13 @@
+#Equivalent Results
+
+greetings = 'Hello World'
+       for x in greetings:
+            print x
+            
+greetings = 'Hello World'
+       for x in range(len(greetings)):
+            print greetings[x]
+            
+greetings = 'Hello World'
+       for x in range(len(greetings), 0, -1):
+            print greetings[-x]
