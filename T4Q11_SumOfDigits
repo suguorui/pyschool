@@ -1,0 +1,19 @@
+# Write a function sumOfDigit(number) that takes in a number as argument and returns the sum of the individual digit in the number.
+# Method 1
+# Using For Loop
+
+def sumOfDigit(number):
+    p=str(number)
+    result = 0
+    for i in p:
+        result = result + int(i)
+    return result
+    #where to put return result wasted me 1 hr!
+    
+# Using %
+def sumOfDigit(number):
+	answer = 0
+	while number>0:
+		answer = answer + number%10
+		number=number/10
+	return answer
