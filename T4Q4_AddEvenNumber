@@ -1,0 +1,13 @@
+#Create a function addEvenNumbers(start, end) that takes in two positive numbers 
+#as arguments and returns the sum of all the even numbers between the start and 
+#end number (inclusive). Note: x % 2 returns 0 if x is an even number.
+
+
+def addEvenNumbers(start,end):
+	numlist = range(start, end)
+	numlist.append(end)
+	result = 0
+	for i in numlist:
+		if i%2 ==0:
+			result += i
+	return result
