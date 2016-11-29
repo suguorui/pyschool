@@ -1,0 +1,7 @@
+def factorial(num):
+    product = 1
+    i = num
+    while i > 0: 
+       product = product * i 
+       i = i-1
+    return product 
