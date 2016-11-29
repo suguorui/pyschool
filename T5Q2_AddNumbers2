@@ -1,0 +1,10 @@
+# Create a function addNumbers(start, end) that adds all the integers between the start and end value (inclusive) and returns the total sum.
+
+def addNumbers(start, end):
+    total = 0
+    i = 0
+    gap = end - start
+    while i <= gap:
+    	total = total + start + i
+    	i = i + 1
+    return total
