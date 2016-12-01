@@ -1,0 +1,19 @@
+#Write a function reverseLookup(dictionary, value) that 
+#takes in a dictionary and a value as arguments and returns 
+#a sorted list of all keys that contains the value. 
+#The function will return an empty list if no match is found.
+
+#>>> reverseLookup({'a':1, 'b':2, 'c':2}, 1)
+# ['a']
+# >>> reverseLookup({'a':1, 'b':2, 'c':2}, 2)
+# ['b', 'c']
+# >>> reverseLookup({'a':1, 'b':2, 'c':2}, 3)
+# []
+
+def reverseLookup(dictionary, value):
+	result=[]
+	for (k,v) in dictionary.items():
+		if v == value:
+			result.append(k)
+	return sorted(result) 
+	
