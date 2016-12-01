@@ -1,0 +1,10 @@
+def convertDictionary(dictionary):
+	v=dictionary.values()
+	k=dictionary.keys()
+	output=[0]*k[-1]
+	for i in k:
+		q=k.index(i)
+		output[i] = v[q]
+	return output
+	
+	
