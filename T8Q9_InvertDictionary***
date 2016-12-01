@@ -1,0 +1,11 @@
+def invertDictionary(d):
+	initial={}
+	AllValue = d.values()    # get all values from d
+	output=initial.fromkeys(AllValue)    # set output to be the initial dictionary with keys from # of AllValue
+	for value in AllValue:                    # iterate through all output keys
+		output[value]=[]                  # set output[value] (all keys) to associate with [] (values)
+		for (k,v) in d.items():           # iterate through d to find match
+			if v == value:            # if v in d matches with output keys
+				output[value].append(k)    #append k to output[value], which is stored in []
+	return output
+		
