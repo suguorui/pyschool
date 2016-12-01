@@ -1,0 +1,6 @@
+def convertVector(numbers):
+	output = {}   
+	for i in range(0,len(numbers)):   # iterate through numbers from 0 to len(numbers)
+		if numbers[i] != 0:       # i != 0
+			output[i] = numbers[i]    #if found, assign value number[i] to keyword output[i]
+	return output 
