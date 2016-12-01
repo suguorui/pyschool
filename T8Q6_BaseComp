@@ -1,0 +1,20 @@
+#A DNA strand consisting of the 4 nucleotide bases is
+# usually represented with a string of letters: A,T, C, G. 
+#Write a function that computes the base composition of a given DNA sequence.
+# >>> baseComposition("CTATCGGCACCCTTTCAGCA")
+#{'A': 4, 'C': 8, 'T': 5,  'G': 3 }
+#>>> baseComposition("AGT")
+#{'A': 1, 'C': 0, 'T': 1,  'G': 1 }
+
+def baseComposition(dna_seq): 
+	result={}
+	DNAcode = ['A','C','T','G']
+	output = result.fromkeys(DNAcode)
+	output['A'] = dna_seq.count('A')
+	output['C'] = dna_seq.count('C')
+	output['T'] = dna_seq.count('T')
+	output['G'] = dna_seq.count('G')
+	
+	return output
+	
+	
