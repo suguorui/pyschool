@@ -1,10 +1,11 @@
 def convertDictionary(dictionary):
-	v=dictionary.values()
-	k=dictionary.keys()
-	output=[0]*k[-1]
-	for i in k:
-		q=k.index(i)
-		output[i] = v[q]
-	return output
+	if dictionary:   # avoid empty list
+		M = max(dictionary.keys())
+		vector = []
+		for i in range(0,(M+1)):           #iterate through
+			vector.append(dictionary.get(i,0))    #remember this .get() function
+		return vector 
+	else:
+		return []
 	
 	
