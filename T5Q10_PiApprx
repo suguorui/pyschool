@@ -1,0 +1,20 @@
+# Create a function that computes the 
+# approximation of pi, based on the number of iterations specified.
+# pi can be computed by 4*(1-1/3+1/5-1/7+1/9- ...).
+
+#    >>> piApprox(1)
+# 4.0
+#     >>> piApprox(10)
+#     3.04183961893
+#     >>> piApprox(300)
+#     3.13825932952
+
+
+def piApprox(num):
+   i = 1
+	 pi = 0
+	 while i <= num:    # set 'while' termination condition
+            factor = 4.0*((-1)**(i-1))/(2*i-1)                        
+            pi = pi + factor     # compute the ith term of the series  
+            i+=1                       # update i
+         return pi
