@@ -1,0 +1,17 @@
+#Create a function that takes in a positive number and return 
+#2 integers such that the number is between the squares of the 
+#2 integers. It returns the same integer twice if the number is 
+#a square of an integer.
+
+def sqApprox(num):
+    i = 0
+    minsq = 0                       # set lower bound
+    maxsq = 0                      # set upper bound
+    while i < (num+1):                       # set 'while' termination condition
+          if i*i<=num:  # complete inequality condition  
+             minsq = i
+          if i*i>=num:  # complete inequality condition
+             maxsq = i
+             break
+          i = i+1                        # update i so that 'while' will terminate
+    return (minsq, maxsq) 
