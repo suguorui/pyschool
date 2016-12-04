@@ -1,0 +1,19 @@
+import math
+def factorial(n): 
+	if n == 0:
+		return 1
+	else:
+		return n * factorial(n-1) 
+def estimatePi():
+    f=2*math.sqrt(2)/9801
+    k=0
+    RHS = 0
+    while True:
+    	num = factorial(4*k)*(1103+26390*k)
+    	den = (factorial(k))**4 * 396**(4*k)
+    	a = f*num/den
+    	RHS += a
+    	if a < 1e-15: break 
+    	k+=1
+    return 1/RHS
+    
