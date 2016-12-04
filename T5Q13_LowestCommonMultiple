@@ -1,0 +1,19 @@
+def LCM(nums): 
+	def lcmfor2number(x, y):  # find LCM for 2 numbers first
+		if x > y:
+			greater = x
+		else:
+			greater = y
+		while True:
+			if (greater % x == 0) and (greater % y == 0): #find first LCM
+				lcmfor2 = greater
+				break 
+			greater += 1
+		return lcmfor2
+	
+	lcm = 1
+	for x in nums:      #iterate through every elements in nums
+		lcm = lcmfor2number(lcm, x)    #take LCM for previous LCM and new elements
+	return lcm
+		
+		 
