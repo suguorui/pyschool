@@ -1,0 +1,7 @@
+#Write a function getMaxNumber(numbers) that returns the maximum number in a list.
+
+def getMaxNumber(numbers): 
+	if numbers:
+		return max(numbers)
+	else:
+		return 'N.A'
