@@ -1,0 +1,11 @@
+# Write a function addOddNumbers(numbers) to add all 
+# the odd numbers in a list. To access each element in a list, 
+# you can use the statement 'for num in numbers:'.
+
+def addOddNumbers(numbers): 
+	OddTotal = 0
+	for num in numbers:
+		if num % 2 != 0:
+			OddTotal += num
+		else: continue 
+	return OddTotal
