@@ -1,0 +1,11 @@
+#Write a function removeFirstAndLast(list) that takes 
+#in a list as an argument and remove the first and last elements 
+#from the list. The function will return a list with the remaining items.
+
+def removeFirstAndLast(numbers): 
+	if len(numbers) <= 2:
+		return []
+	else:
+		numbers.remove(numbers[0])
+		numbers.remove(numbers[-1])
+		return numbers
