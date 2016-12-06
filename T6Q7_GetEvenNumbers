@@ -1,0 +1,9 @@
+#Write a function getEvenNumbers(numbers) to return all the even numbers in a list.
+
+def getEvenNumbers(numbers): 
+	Evenlist = []
+	for num in numbers:
+		if num % 2 == 0:
+			Evenlist.append(num)
+		else: continue 
+	return Evenlist
