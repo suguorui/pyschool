@@ -1,0 +1,12 @@
+def matrixDimensions(m): 
+	row = len(m)
+	for element in m:  #navigate all cells in m
+		if len(element) != len(m[0]):  #if any cell length != leng of first cell
+			return 'This is not a valid matrix.'
+			break
+		else:
+			col = len(m[0])
+	
+#Metho 1	return 'This is a %sx%s matrix.' %(row, col)   #formatting of string for 2 arguments; use Tuple 
+
+	return 'This is a {0}x{1} matrix.'.format(row,col);  #Method 2
