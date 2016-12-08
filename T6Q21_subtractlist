@@ -1,0 +1,10 @@
+#Write a function (list1, list2) that takes 
+#in two lists as arguments and return a list that 
+#is the result of removing elements from list1 that can be found in list2.
+
+def subtractList(list1, list2): 
+	result = []
+	for a in list1:
+		if a not in list2:
+			result.append(a)
+	return result
