@@ -10,6 +10,7 @@
 #   >>> getNumbers(0)
 #   [0]
 
+# Method 1 using only append 
 
 def getNumbers(num): 
 	firsthalf = []
@@ -23,3 +24,18 @@ def getNumbers(num):
 		return firsthalf + [0] + secondhalf
 	else: return firsthalf + secondhalf     #for odd number entry 
 		
+		
+# Method 2 using extend
+def getNumbers(num): 
+	firsthalf = []
+	secondhalf = []
+	result = []
+	while num > 0:    
+		firsthalf.extend([num**2])
+		num = num - 2
+		secondhalf = firsthalf[::-1]    #reverse a list 
+	if num % 2 == 0:   #for even number entry 
+		return firsthalf + [0] + secondhalf
+	else: return firsthalf + secondhalf     #for odd number entry 
+		
+
