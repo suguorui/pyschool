@@ -1,0 +1,25 @@
+#Write a function getNumbers(number) that takes in a
+#number as argument and return a list of numbers as shown in the samples given below.
+
+#    >>> getNumbers(10)
+#    [100, 64, 36, 16, 4, 0, 4, 16, 36, 64, 100]
+#    >>> getNumbers(9)
+#    [81, 49, 25, 9, 1, 1, 9, 25, 49, 81]
+#   >>> getNumbers(8)
+#   [64, 36, 16, 4, 0, 4, 16, 36, 64]
+#   >>> getNumbers(0)
+#   [0]
+
+
+def getNumbers(num): 
+	firsthalf = []
+	secondhalf = []
+	result = []
+	while num > 0:    
+		firsthalf.append(num**2)
+		num = num - 2
+		secondhalf = firsthalf[::-1]    #reverse a list 
+	if num % 2 == 0:   #for even number entry 
+		return firsthalf + [0] + secondhalf
+	else: return firsthalf + secondhalf     #for odd number entry 
+		
