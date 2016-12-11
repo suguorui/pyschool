@@ -1,0 +1,16 @@
+#Write the function getVowels(word) that takes in a word as 
+#an argument and returns the vowels ('a', 'e', 'i', 'o', 'u') in that word.
+
+# >>> getVowels("apple")
+#    ['a', 'e']
+#    >>> getVowels("Apple")
+#    ['A', 'e']
+#    >>> getVowels("Banana")
+#    ['a', 'a', 'a']
+
+def getVowels(word):
+	vow = []
+	for letter in list(word):
+		if letter in 'aeiouAEIOU':
+			vow.append(letter)
+	return vow
