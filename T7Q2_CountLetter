@@ -1,0 +1,16 @@
+#Write the function countLetter(word, letter) that takes 
+#in a word and a letter as arguments and returns the number of 
+#occurrence of that letter in the word.
+
+#    >>> countLetter("apple", "p")
+#    2
+#    >>> countLetter("Apple", "a")
+#    0
+#    >>> countLetter("Banana", "n")
+#    2
+
+#Method 1
+def countLetter(word, letter):
+	return word.count(letter)
+  
+#Method 2
