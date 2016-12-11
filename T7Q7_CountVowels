@@ -1,0 +1,12 @@
+#Write a function countVowels(word) that takes 
+#in a word as an argument and returns the number of vowels 
+#('a', 'e', 'i', 'o', 'u') in the word.
+
+def countVowels(word):
+	wordlist = list(word)
+	vow = 0
+	vow = [vow+1 for letter in wordlist if letter in 'aeiou'] 
+	return len(vow)
+
+ 	
+			
