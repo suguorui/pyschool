@@ -1,0 +1,10 @@
+#Write a function removeLetter(word, letter) that takes 
+#in a word and a letter as arguments and remove all the
+#occurrence of that particular letter from the word. 
+#The function will returns the remaining leters in the word.
+
+#string is immutable
+#need to create a new string and use replace
+
+def removeLetter(word, letter):
+	return word.replace(letter,'')
