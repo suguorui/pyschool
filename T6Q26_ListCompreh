@@ -1,0 +1,7 @@
+#List comprehension offers a concise way to derive a new list
+#from an existing list or sequence. Given a list of numbers, 
+#write a function that returns the numbers that are greater than the average.
+
+
+def getAboveAverage(nums):
+    return [ x for x in nums if x > (sum(nums)/len(nums))]  # complete the list comprehension 
