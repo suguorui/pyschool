@@ -1,0 +1,13 @@
+#Write the function startEndVowels(word) that returns True if the word starts and ends with vowels.
+
+def startEndVowels(word):
+	if len(word)>1:
+		if (word[0] in 'aeiouAEIOU') and (word[-1] in 'aeiouAEIOU'):
+			return True 
+		else: return False
+	elif len(word) == 1:
+		if word[0] in 'aeiouAEIOU':
+			return True 
+	else:
+		return False 
+		
