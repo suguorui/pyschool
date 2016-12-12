@@ -1,0 +1,11 @@
+#Write the function removeVowels(word) that removes 
+#all the vowels ('a', 'e', 'i', 'o', 'u') in a word 
+#and returns the remaining letters in the word.
+
+def removeVowels(word):
+	wordlist = list(word)
+	for letter in wordlist:
+		if letter in 'aeiouAEIOU':
+			wordlist.remove(letter)
+	return ''.join(wordlist)
+		
