@@ -1,0 +1,16 @@
+#Write the function getCommonLetters(word1, word2) 
+#that takes in two words as arguments and returns a new 
+#string that contains letters found in both string. Ignore 
+#repeated letters and sort the result in alphabetical order.
+
+def getCommonLetters(word1, word2):
+	word1list = list(word1)
+	word2list = list(word2)
+	result = []
+	for word1 in word1list:
+		for word2 in word2list:
+			if word1 == word2:
+				result.append(word1)
+	result = sorted(set(result))
+	return ''.join(result)
+		
