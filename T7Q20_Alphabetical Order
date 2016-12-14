@@ -1,0 +1,10 @@
+#Write a function isInAlphabeticalOrder(word) that takes 
+#in a word as argument and returns True if the word contains 
+#letters that are arranged in alphabetical order. For example, 
+#the letter 'c' should not appear before the letter 'a'.
+
+def isInAlphabeticalOrder(word):
+	for i in range(len(word)-1):
+		if word[i+1] < word[i]:
+			return False
+	return True
