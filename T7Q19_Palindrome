@@ -1,0 +1,23 @@
+# A palindrome is a word, phrase, number or other sequence 
+#of units that can be read the same way in either direction. 
+#Write a function that determines whether the given word or number is a palindrome.
+
+#>>> isPalindrome("Racecar")
+#    True
+#    >>> isPalindrome(121)
+#    True
+#    >>> isPalindrome("Never")
+#    False
+#    >>> isPalindrome("level")
+#    True
+#    >>> isPalindrome("")
+#    False
+
+def isPalindrome(anyinput):
+	inputlist = list(str(anyinput))
+	if anyinput:
+		for i in range(len(inputlist)):
+			if inputlist[i] != inputlist[-(i+1)]:
+				return False
+		return True
+	else: return False
