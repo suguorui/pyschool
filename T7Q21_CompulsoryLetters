@@ -1,0 +1,19 @@
+#Write a function isAllLettersUsed(word, required) that takes in 
+#a word as the first argument and returns True if the word contains 
+#all the letters found in the second argument.
+
+#    >>> isAllLettersUsed('apple', 'apple')
+#    True
+#    >>> isAllLettersUsed('apple', 'google')
+#    False
+#    >>> isAllLettersUsed('learning python', 'google')
+#    True
+#    >>> isAllLettersUsed('learning python', 'apple')
+#    True
+
+def isAllLettersUsed(word, required):
+	wordtest = set(list(required))
+	for letter in wordtest:
+		if letter not in word:
+			return False
+	return True
