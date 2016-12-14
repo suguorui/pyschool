@@ -1,0 +1,13 @@
+#Write a function rightJustify(word) that takes in a word as
+#argument and return a word with leading spaces so that the 
+#last letter of the word is in column 50 of the display.
+
+#>>> rightJustify('apple')
+#    '                                             apple'
+#    >>> rightJustify('google')
+#    '                                            google'
+#    >>> rightJustify('microsoft')
+#    '                                         microsoft'
+
+def rightJustify(word):
+	return ' '*(50-len(word)) + word
