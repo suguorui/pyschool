@@ -1,0 +1,25 @@
+#Write a function splitWord(word, numOfChar) that takes in 
+#a word and a number as arguments. The function will split the 
+#word into smaller segments with each segment containing the number
+#of letter specified in the numOfChar argument. These segments are 
+#stored and returned in a list.
+
+#  >>> splitWord('google', 2)
+#    ['go', 'og', 'le']
+#    >>> splitWord('google', 3)
+#    ['goo', 'gle']
+#    >>> splitWord('apple', 1)
+#    ['a', 'p', 'p', 'l', 'e']
+#    >>> splitWord('apple', 4)
+#    ['appl', 'e']
+
+
+def splitWord(word, numOfChar):
+	i = 0
+	result = []
+	while i < len(word):
+		segment = word[i: (i+numOfChar)]
+		result.append(segment)
+		i = i + numOfChar 
+	return result 
+		
