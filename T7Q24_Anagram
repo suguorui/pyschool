@@ -1,0 +1,24 @@
+#An anagram is a word formed by reordering the letters of
+#another word. Write a function isAnagram(w1, w2) that takes
+#in two words as arguments and return True if one word is 
+#an anagram of the other word.
+
+#  >>> isAnagram('google', 'gogole')
+#    True
+#    >>> isAnagram('google', 'gogoll')
+#    False
+#    >>> isAnagram('google', 'gogogo')
+#    False
+#    >>> isAnagram('Google', 'google')
+#    True
+
+def isAnagram(w1, w2):
+	w1 = w1.lower()
+	w2 = w2.lower()
+	if len(w1) == len(w2):
+		if set(w1) == set(w2):
+			return True
+		else: 
+			return False
+	else:
+		return False
