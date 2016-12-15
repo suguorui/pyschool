@@ -1,0 +1,26 @@
+# Write a function isTripleDouble(word) that takes in a word as 
+# argument and returns True if the word contains three 
+# consecutive double letters.
+
+#  >>> isTripleDouble('appllee')
+#    True
+#    >>> isTripleDouble('aapplee')
+#    False
+#    >>> isTripleDouble('applle')
+#    False  
+
+
+def isTripleDouble(word):
+	i = 0
+	pair = 0
+	while i < len(word) - 1:
+		if word[i] == word[i+1]:
+			pair += 1
+			if pair == 3:
+				return True
+			i += 2
+		else:
+			pair = 0
+			i += 1
+	return False
+			
