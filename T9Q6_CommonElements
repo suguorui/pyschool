@@ -1,0 +1,13 @@
+def commonElements(t1, t2): 
+	'''Write a function commonElements(t1, t2) that takes in 2 tuples 
+	as arguments and returns a sorted tuple containing elements that 
+	are found in both tuples.
+	'''
+	result = []
+	for i in t1:
+		for j in t2:
+			if i == j:
+				result.append(i)
+	return tuple(sorted(result))
+				
+	
