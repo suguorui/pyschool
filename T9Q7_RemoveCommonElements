@@ -1,0 +1,18 @@
+def removeCommonElements(t1, t2): 
+	'''Write a function removeCommonElements(t1, t2) that 
+	takes in 2 tuples as arguments and returns a sorted tuple 
+	containing elements that are not found in both tuples.
+	'''
+	result = set(list(t1) + list(t2))
+	common = []
+	for i in t1:
+		for j in t2:
+			if i == j:
+				common.append(i)
+	for element in common:
+		if element in result:
+			result.remove(element)
+		else: pass
+	return tuple(sorted(result))
+			
+
