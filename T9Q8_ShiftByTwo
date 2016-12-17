@@ -1,0 +1,25 @@
+def shiftByTwo(*args):
+	'''Write a function shiftByTwo(*args) that takes in variable-length 
+	argument and returns a tuple with its elements shifted to the right 
+	by two indices. See samples given below.
+	'''
+	#>>> shiftByTwo(1,2,3,4,5,6)
+    	#(5, 6, 1, 2, 3, 4)
+    	#>>> shiftByTwo('a','b','c','d')
+    	#('c', 'd', 'a', 'b')
+    	#>>> shiftByTwo('a','b')
+    	#('a', 'b')
+    	#>>> shiftByTwo('b')
+    	#('b',)
+	if len(args)>2:
+		result = []
+		result.extend([args[-2],args[-1]])
+		i = 2
+		while i < (len(args)):
+			result.append(args[i-2])
+			i += 1 
+		return tuple(result)
+	else:
+		return tuple(args)
+
+		
