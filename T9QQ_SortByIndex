@@ -1,0 +1,19 @@
+def sortByIndex(aList):
+	'''Write a function sortByIndex(aList) that takes 
+	in a list of tuple in the following format: (index, value) 
+	and returns a new tuple with its elements sorted based on the index.
+	'''
+	#>>> sortByIndex([(4,'Python'), (1, 'Welcome'), (3, 'Begin'), (2, 'To')])
+   	# ('Welcome', 'To', 'Begin', 'Python')
+    	#>>> sortByIndex([(2,'Programming'), (3, 'is'), (1, 'Python'), (4, 'Fun')])
+    	#('Python', 'Programming', 'is', 'Fun')
+    	#>>> sortByIndex([(2,'is'), (3, 'Immutable'), (1, 'Tuple')])
+    	#('Tuple', 'is', 'Immutable')
+    	
+	result = []
+	aListdict = dict(aList)  # convert into dictionary
+	for k in sorted(aListdict): # sort dict, return only keys sorted
+		j = aListdict[k]   #get values from sorted keys
+		result.append(j)   #append values, return list
+	return tuple(result)  #convert into tuple 
+		
