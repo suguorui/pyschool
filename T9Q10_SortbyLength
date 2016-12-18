@@ -1,0 +1,17 @@
+def sortByLength(t, order):
+	'''Write a function sortByLength(t, order) that 
+	takes in a tuple of string and returns a new tuple 
+	with its elements sorted by the length of the string. 
+	The order of sorting is based on the value of the 
+	second argument: 'asc' or 'des'.
+	'''
+	#>>> sortByLength(('iOS', 'iPhone', 'iPad'), 'asc')
+    	#('iOS', 'iPad', 'iPhone')
+    	
+	newt = list(t)
+	if order == 'asc':
+		result = sorted(newt, key=len)
+	else:
+		result = sorted(newt, key=len, reverse=True)
+	
+	return tuple(result)
