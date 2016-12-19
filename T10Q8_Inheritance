@@ -1,0 +1,37 @@
+class Person:
+      """A base class"""
+
+#Inheritance allows the reuse of code, by implementing a parent-child 
+#relationship between classes. Create 2 derived classes Student and
+#WorkingAdult from the base class Person.
+
+# >>> s = Student('Peter', 9, 'ABC Primary School')
+#    >>> s.introduce()
+#    'My name is Peter. I am 9 years old. I am studying at ABC Primary School.'
+#    >>> a = WorkingAdult('John', 23, 'Waiter')
+#    >>> a.introduce()
+#    'My name is John. I am 23 years old. I am a waiter.'
+
+
+      def __init__(self, name, age):
+          self.name = name
+          self.age = age
+
+class Student(Person):
+      """A derived class for Student"""
+      def __init__(self, name, age, school):
+          Person.__init__(self, name, age)
+          self.school = school
+          
+      def introduce(self):
+      	  #Student.introduce(self)	
+          return "My name is %s. I am %d years old. I am studying at %s." % (self.name,self.age,self.school)
+
+class WorkingAdult(Person):
+      """A derived class for WorkingAdult"""
+      def __init__(self, name, age, job):
+      	   Person.__init__(self, name, age)
+      	   self.job = job	
+
+      def introduce(self):
+      	   return "My name is %s. I am %d years old. I am a %s." % (self.name,self.age,self.job.lower())	
