@@ -1,0 +1,7 @@
+def power(x, y):
+    '''Write a recursive function power(x, y) to calculate the value of x raised to the power of y.
+    '''
+    if y == 0:
+        return 1
+    else:
+        return x**y
