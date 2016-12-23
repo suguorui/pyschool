@@ -1,0 +1,9 @@
+def fibonacci(number):
+	'''Write a function fibonacci(number) that takes in a number as argument. The function should calculate and return the fibonacci number for the number passed in.
+	'''
+	if number == 0:
+		return 0
+	elif number == 1:
+		return 1
+	else:
+		return fibonacci(number - 1) + fibonacci(number - 2)
