@@ -1,0 +1,7 @@
+def sumOfDigits(num):  
+	'''Write a recursive function sumOfDigits that takes in an integer and returns the sum of the digit in the integer.
+	'''
+	if num == 0:
+		return 0
+	else:
+		return num % 10 + sumOfDigits(num//10)
