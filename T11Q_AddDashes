@@ -1,0 +1,9 @@
+def addDashes(s):
+#Write a recursive function addDashes() that takes in a string and returns a new string with all the characters separated by a "-".
+
+    if len(s) < 1:
+        return None
+    elif len(s) == 1:
+        return s
+    else:
+        return s[0] + '-' + addDashes(s[1:])
