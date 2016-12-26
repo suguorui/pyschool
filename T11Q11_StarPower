@@ -1,0 +1,17 @@
+#Write a function createStars(num) that takes in a number as argument and returns a string of stars 2num long.
+
+# >>> createStars(0)      # 2 to power of 0 = 1
+#    '*'
+#    >>> createStars(1)      # 2 to power of 1 = 2
+#    '**'
+#    >>> createStars(2)      # 2 to power of 2 = 4
+#    '****'
+#    >>> createStars(3)      # 2 to power of 3 = 8
+#    '********'
+
+
+def createStars(x):
+    if x == 0:
+        return '*'*1
+    else:
+        return '*'*(2**(x-1)) + createStars(x-1) 
