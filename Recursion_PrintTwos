@@ -1,0 +1,14 @@
+#Write a function printTwos(n) that takes in a number as argument and 
+#returns a string composed of an odd number multiplied by 2s such that 
+#the final value is equal to n. There should be equal number of 2s on 
+#both sides. Extra 2 should appear at the front of the string. 
+#Note: The value of the odd number can be 1.
+
+def printTwos(n): 
+	if n % 4 == 0:
+		return '2 * %s * 2' %printTwos(n/4)
+	elif n % 2 == 0:
+		return '2 * %s' %printTwos(n/2)
+	elif n % 2 != 0:
+		return str(n)
+
