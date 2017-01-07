@@ -1,0 +1,13 @@
+# The Pascal's Triangle is formed by filling the top 2 rows with '1's. 
+# For subsequent row, the numbers at the edge are all '1's. 
+# Each element inside the triangle is the sum of the 2 elements above it. 
+#Write a recursive function to compute the value of each element given the row and column.
+
+# Note: Row and column are counting from 0, i.e. coordinates of top element is (0, 0).
+def pascal(row, col): 
+	if col == 0:
+		return 1
+	elif col == row:
+		return 1
+	else:
+		return pascal(row-1, col-1) + pascal(row-1, col)
