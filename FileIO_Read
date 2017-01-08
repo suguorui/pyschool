@@ -1,0 +1,18 @@
+# read([size]). Read size bytes from the file, unless EOF is hit. 
+# If size is omitted or negative, the full data is returned.
+
+# Write a function that open a file for reading and returns the number of bytes and newlines('\n').
+def readFile(filename):
+    f = open(filename)
+    size = 0
+    lines = 0
+    buf = f.read()      
+    while buf!="":
+    	for bytes in buf:
+    		if bytes == '\n':
+    			lines += 1
+		size += 1
+        buf = f.read() 
+    f.close()                  
+
+    return (size, lines) 
