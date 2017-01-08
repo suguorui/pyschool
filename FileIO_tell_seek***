@@ -1,0 +1,14 @@
+# Use seek() and read() methods to retrieve a hidden code from a list of indexes.
+# A negative index implies searching from the end of document.
+def getCode(filename, indexes): 
+	f = open(filename,'rb+')
+	output = []
+	for num in indexes:
+		if num > 0:
+			f.seek(num,0)
+		else:
+			f.seek(num,2)
+		r = f.read(1)
+		output.append(r)
+	return ''.join(output)
+	file.close()
