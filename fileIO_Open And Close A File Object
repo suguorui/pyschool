@@ -1,0 +1,10 @@
+# Create a file called 'tmp.txt' for writing, and close the file after that.
+
+# open a file
+f = open('tmp.txt', 'w')  # replace 'filename' and 'mode' 
+
+# write to file
+f.write('hello')
+
+# close a file
+f.close()
