@@ -1,0 +1,33 @@
+#readlines([sizehint]). Return a list of lines read using readline() until EOF. If provided, sizehint will return approximately the specified bytes instead of reading up to EOF.
+For large files, it is more efficient to iterate through the file object using for.
+
+# In a competition, the average score of a contestant is computed after discarding the best
+# and worst scores. Write a function that returns the average scores of the gold medalist. 
+# The raw scores of each contestant is stored in a file in the following format:
+# Li Ning, 9.8 9.7 9.6 9.3 9.4, 9.8
+# Millman, 9.8 9.2 9.1 9.0 9.4, 9.5 9.1
+#
+
+def getWinner(filename):
+    # read file using readlines() 
+    results = open(filename)        
+
+    # initialize variables
+    winner = 0  
+    max_score = 0
+
+    # process results
+    for line in results:
+        tokens = line.split(',')    # split line using ',' separator   
+        name = tokens[0]                  # get the name
+        scores = map(float, tokens[1].split()) # get scores
+        # sort scores
+        scores.sort()
+        # compute average, throwing the worst and best scores.
+        #ave = float((sum(scores)-max(scores)-min(scores)))/(len(scores)-2) 
+        ave = float(sum(scores[1:(len(scores)-1)])/(len(scores)-2))                 
+        if ave > max_score:
+           winner = name             # save name of highest score so far
+           max_score = ave         # save highest score
+
+    return "%s [%.1f]" % (winner, max_score) 
