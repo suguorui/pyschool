@@ -1,0 +1,4 @@
+# Fill in the appropriate 'pattern' and 'string' pareameters for 'findall' in following exercises.
+import re
+a = re.findall('e', 'telephone')  # len(a) = 3
+b = re.findall( 'a', 'aababab')  # len(b) = 4 
