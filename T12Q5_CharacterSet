@@ -1,0 +1,6 @@
+# Complete the character sets in the regualar expressions below so that they
+# matches the descriptions to the right.
+import re
+regex_1 = '[a-z]'     #  match a to z
+regex_2 = '[A-Z]'     #  match A to Z
+regex_3 = '[a-zA-Z0-9]'     #  match alphanumeric characters 
