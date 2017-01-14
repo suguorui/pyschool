@@ -1,0 +1,4 @@
+# Write down the equivalent RE for \w and \W using character set [ ]. 
+import re
+regex_1 =  '[a-zA-Z0-9_]'  # \w  
+regex_2 =  '[^a-zA-Z0-9_]'  # \W
