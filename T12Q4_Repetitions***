@@ -1,0 +1,14 @@
+# Replace the m,n in the regular expressions below so that they
+# matches the descriptions to the right.
+import re
+regex_1 = '{4}'     #  match exactly 4 characters
+regex_2 = '{0,}'   #  match 0 or more characters
+regex_3 = '{,1}'   #  match 0 or 1 character 
+regex_4 = '{1,}'   #  match 1 or more character 
+
+# see the language - use of +
+# Test Cases	Expected Result	Returned Result	Result
+re.findall('.'+regex_4, 'efgh')	['efgh']	['efgh']	
+re.findall('d'+regex_3, 'bddad')	['', 'd', 'd', '', 'd', '']	['', 'd', 'd', '', 'd', '']	
+re.findall('b'+regex_1, 'acbbbbef')	['bbbb']	['bbbb']	
+re.findall('.'+regex_2, 'abcd')	['abcd', '']	['abcd', '']	
