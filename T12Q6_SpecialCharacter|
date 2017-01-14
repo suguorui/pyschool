@@ -1,0 +1,4 @@
+# Initialize the variables "regex" and "target" which produces the output in the example above.
+import re
+regex  = "com|edu|org"
+target = "orgeducome" 
